@@ -11,9 +11,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_key_pressed(KEY_W):
 		position.y -= get_parent().PADDLE_SPEED * delta
-	elif Input.is_action_pressed("ui_down"):
+	elif Input.is_key_pressed(KEY_S):
 		position.y += get_parent().PADDLE_SPEED * delta
 	
 	# limit paddle movement to window
